@@ -1,0 +1,23 @@
+class Solution {
+    public int solution(int[] A) {
+        int answer = -1;
+
+        for(int i = 0; i < A.length; i++) {
+            for(int j = i+1; j < A.length; j++) {
+                if(sum(A[i]) == sum(A[j]))
+                    answer = Math.max(A[i] + A[j], answer);
+            }
+        }
+        return answer;
+    }
+
+    private int sum(int num) {
+        int sum = 0;
+
+        while (num != 0) {
+            sum += num%10;
+            num /= 10;
+        }
+        return sum;
+    }
+}
