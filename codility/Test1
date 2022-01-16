@@ -1,0 +1,16 @@
+class Solution {
+    public String solution(String S) {
+        List<String> list = new ArrayList<>();
+
+        for(int i = 0; i < S.length(); i++) {
+            StringBuilder builder = new StringBuilder(S);
+            builder.replace(i, i+1, "");
+
+            list.add(builder.toString());
+        }
+
+        list.sort(Comparator.naturalOrder());
+
+        return list.get(0);
+   }
+}
