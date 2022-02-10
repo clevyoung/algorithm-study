@@ -21,7 +21,9 @@ class Solution {
                     break;
                 // 가까운 손    
                 case 2:
+                    // 눌러야할 번호와 왼손 위치와의 거리
                     int leftDistance = (Math.abs(num-left))/3 + (Math.abs(num-left))%3;
+                    // 눌러야할 번호와 오른손 위치와의 거리
                     int rightDistance = (Math.abs(num-right))/3 + (Math.abs(num-right))%3;
                     if(leftDistance==rightDistance){
                         if(hand.equals("right")){
