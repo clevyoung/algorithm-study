@@ -1,35 +1,17 @@
 import java.util.*;
-import java.lang.System;
+import java.lang.*;
 
 class Solution {
-    public int solution(int left, int right) {
-        int answer = 0;
-        for(int i = left; i <= right; i++){
-            int count = getCount(i);
+    public int solution(int n) {
 
-            if(getOdd(count)){
-                answer += i;
-            }else {
-                answer -= i;
-            }
-        }
-        return answer;
-    }
+        String temp = Integer.toString(n, 3);
+        String reverse = "";
 
-    boolean getOdd(int num){
-        if(num % 2 == 0){
-            return true;
-        }else {
-            return false;
-        }
-    }
+        // for(int i = temp.length() - 1; i >= 0; i--) {
+        //     reverse = reverse + temp.charAt(i);
+        // }
+        temp = new StringBuilder(temp).reverse().toString();
 
-    int getCount(int num) {
-        int count = 0;
-        for (int i = 1; i * i <= num; i++) {
-            if (i * i == num) count++;
-            else if (num % i == 0) count += 2;
-        }
-        return count;
+        return Integer.parseInt(temp, 3);
     }
 }
