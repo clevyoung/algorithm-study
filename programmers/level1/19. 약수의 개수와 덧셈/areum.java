@@ -23,3 +23,6 @@ public int solution(int left, int right) {
         return cnt;
     }
 }
+
+
+// * 제곱수인 경우 약수의 개수 홀수 !!!! 나머지는 짝수 *
