@@ -2,17 +2,16 @@ function solution(strings, n) {
   let answer = [];
   let arr = []
   
-  for(let i=0; i < strings.length; i++){
+  for(i in strings){
       arr.push(strings[i][n] + strings[i])
   }
-  
+
   arr.sort()
   
-  for(let i=0; i < arr.length; i++){
+  for(i in arr){
       answer.push(arr[i].substring(1))
   }
-  
-  
+
   return answer;
 }
 
