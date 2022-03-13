@@ -28,6 +28,6 @@ function solution(A) {
 	return answer;
 }
 
-solution([51, 72, 17, 42]); // clear
-solution([42, 33, 60]); // clear
-solution([51, 32, 43]); // clear
+solution([51, 72, 17, 42]); // solved
+solution([42, 33, 60]); // solved
+solution([51, 32, 43]); // solved
