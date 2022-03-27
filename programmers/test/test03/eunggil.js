@@ -1,6 +1,6 @@
 function solution(movie) {
 	let answer = [];
-  let sorts = [];
+	let sorts = [];
 
 	const movies = movie.reduce((prev, curr) => {
 		prev[curr] = ++prev[curr] || 1;
@@ -18,11 +18,11 @@ function solution(movie) {
 		return b[1] - a[1];
 	});
 
-  sorts.forEach((item) => {
-    answer.push(item[0])
-  })
+	sorts.forEach((item) => {
+		answer.push(item[0]);
+	});
 
-	return answer
+	return answer;
 }
 
-console.log(solution(['spy', 'ray', 'spy', 'room', 'once', 'ray', 'spy', 'once'])) // solved;
+solution(['spy', 'ray', 'spy', 'room', 'once', 'ray', 'spy', 'once']); // solved;
